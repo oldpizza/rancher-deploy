@@ -32,6 +32,8 @@ curl = ตำแหน่งไฟล์ที่จะไป download มา -o
 set path ของ winrar เพื่อใช้ในการแตกไฟล์
 
 .........................___..................................
+
+
 การสร้าง shortcut เพื่อนำไปใช้ใน startup 
 
 echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
