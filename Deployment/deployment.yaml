@@ -18,7 +18,7 @@ spec:
         app: smartcard
     spec:
       containers:
-      - image: nginx
+      - image: nginx:1.20
         name: nginx
         resources: {}
 status: {}
