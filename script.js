@@ -14,49 +14,46 @@ function load_data() {
       console.log(data);
       if (data == null) {
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_6374425a-f47b-8396-b3f8-d3246e96583f"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_99e39c73-3e97-42d3-836e-094a5718b85b"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_2e1f70d8-c270-b441-c3d2-fb7f3a055413"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_a3ca9a0b-12af-453f-9e76-fde1f6dd3d3b"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_c9e08b1b-561b-b643-7e5b-8b17ea18c2a9"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_19a58dca-4c1e-4bbd-b138-2cef954e6f49"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_ab669fbf-e964-4cce-b904-498fcbe9762c"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_f866bd7e-befc-4903-aec0-bc5b70645e9a"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_ee635376-333b-2191-c035-288e2f1fd500"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_7c3099db-0d23-4f80-956c-a42897cca1b4"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_1766a43f-ebd3-90e2-74ec-fc6f0a1d6a68"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_b1b437bd-e327-4741-a0fb-2d05b30c260d"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_a6b9c865-193d-1432-fb4d-1e1602981e4f"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_be700b56-d4da-4806-9d0c-26d44ae60c84"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_defeb7d4-27ef-f765-20e6-de2633eb2e60"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_0c529f50-e0dd-495c-89d7-a7543abd2a5a"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_33a76390-0da2-d76d-1bb9-3263298fbc7b"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_a58e8d56-9843-44fc-8b67-569d397529f8"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_57f0ff5c-de5c-f8ef-4331-2e7a359787fa"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_1ff81879-fdc8-40ba-aaea-3e6b550a5221"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_92788352-da37-9f12-40f7-5715edeea5e2"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_0d21b1b0-d701-4fc8-8a2e-33fa38c8a365"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_59429f9f-6657-6966-9ebd-89aa19a4774d"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_f9838f19-429b-4d5a-8922-43122a97c8aa"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_03e18d21-17f4-57f7-c8f9-416b3e1ef108"
-        ).value = "";
+          "3674b278-8bb0-531f-c614-b60361240658_fe0995a5-e23b-42a2-b3bd-f3b4a18ae66e"
+        ).value = '';
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_893e6618-32d5-61c0-bbd8-208b5a3ba32d"
-        ).value = "";
-        document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_919539a4-1c3a-d25c-e08e-b15e4b334524_Picture"
+          "3674b278-8bb0-531f-c614-b60361240658_2741992e-470f-7740-cbc7-83bc4fc7dd86_Picture"
         ).src = "/Runtime/Image.ashx?ImID=";
 
         console.log("function is end");
@@ -65,49 +62,46 @@ function load_data() {
         let preN = data.TitleNameTh;
         var repreN = preN.replace(/น.ส./g, "นางสาว"); //คำนำหน้า
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_6374425a-f47b-8396-b3f8-d3246e96583f"
+          "3674b278-8bb0-531f-c614-b60361240658_99e39c73-3e97-42d3-836e-094a5718b85b"
         ).value = data.CitizenNo;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_2e1f70d8-c270-b441-c3d2-fb7f3a055413"
+          "3674b278-8bb0-531f-c614-b60361240658_a3ca9a0b-12af-453f-9e76-fde1f6dd3d3b"
         ).value = repreN;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_c9e08b1b-561b-b643-7e5b-8b17ea18c2a9"
+          "3674b278-8bb0-531f-c614-b60361240658_19a58dca-4c1e-4bbd-b138-2cef954e6f49"
         ).value = data.FirstNameTh;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_ab669fbf-e964-4cce-b904-498fcbe9762c"
+          "3674b278-8bb0-531f-c614-b60361240658_f866bd7e-befc-4903-aec0-bc5b70645e9a"
         ).value = data.LastNameTh;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_ee635376-333b-2191-c035-288e2f1fd500"
+          "3674b278-8bb0-531f-c614-b60361240658_7c3099db-0d23-4f80-956c-a42897cca1b4"
         ).value = expDate;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_1766a43f-ebd3-90e2-74ec-fc6f0a1d6a68"
-        ).value = "";
-        document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_a6b9c865-193d-1432-fb4d-1e1602981e4f"
+          "3674b278-8bb0-531f-c614-b60361240658_b1b437bd-e327-4741-a0fb-2d05b30c260d"
         ).value = data.HomeNo;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_defeb7d4-27ef-f765-20e6-de2633eb2e60"
+          "3674b278-8bb0-531f-c614-b60361240658_be700b56-d4da-4806-9d0c-26d44ae60c84"
         ).value = data.Road;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_33a76390-0da2-d76d-1bb9-3263298fbc7b"
+          "3674b278-8bb0-531f-c614-b60361240658_0c529f50-e0dd-495c-89d7-a7543abd2a5a"
         ).value = data.Amphur;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_57f0ff5c-de5c-f8ef-4331-2e7a359787fa"
+          "3674b278-8bb0-531f-c614-b60361240658_a58e8d56-9843-44fc-8b67-569d397529f8"
         ).value = data.Moo.substring(7);
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_92788352-da37-9f12-40f7-5715edeea5e2"
+          "3674b278-8bb0-531f-c614-b60361240658_1ff81879-fdc8-40ba-aaea-3e6b550a5221"
         ).value = data.Tumbol;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_59429f9f-6657-6966-9ebd-89aa19a4774d"
+          "3674b278-8bb0-531f-c614-b60361240658_0d21b1b0-d701-4fc8-8a2e-33fa38c8a365"
         ).value = data.Province;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_03e18d21-17f4-57f7-c8f9-416b3e1ef108"
+          "3674b278-8bb0-531f-c614-b60361240658_f9838f19-429b-4d5a-8922-43122a97c8aa"
         ).value = data.FirstNameEn;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_893e6618-32d5-61c0-bbd8-208b5a3ba32d"
+          "3674b278-8bb0-531f-c614-b60361240658_fe0995a5-e23b-42a2-b3bd-f3b4a18ae66e"
         ).value = data.LastNameEn;
         document.getElementById(
-          "16a404c4-756e-eac5-49ef-49708eb66b2d_919539a4-1c3a-d25c-e08e-b15e4b334524_Picture"
+          "3674b278-8bb0-531f-c614-b60361240658_2741992e-470f-7740-cbc7-83bc4fc7dd86_Picture"
         ).src = "data:image/png;base64," + data.Photo;
 
         console.log("function is end");
