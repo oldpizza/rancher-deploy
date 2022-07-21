@@ -2,7 +2,7 @@ function load_data() {
   console.log("function is working");
 
   $.ajax({
-    url: "https://smartcard.saksiam.co.th:8182/thaiid/read.jsonp?callback=callback&section1=true&section2a=true&section2b=true&section2c=true",
+    url: "https://local.saksiam.co.th:8182/thaiid/read.jsonp?callback=callback&section1=true&section2a=true&section2b=true&section2c=true",
     dataType: "jsonp",
     crossDomain: true,
     type: "GET",
