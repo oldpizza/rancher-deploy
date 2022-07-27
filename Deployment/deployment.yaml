@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - image: taesaeng28/smartcard
-        name: smartcard-nginx
+        name: nginx
         resources: {}
 status: {}
