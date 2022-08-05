@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Login to DockerHub
+    - uses: docker/login-action@v2
+      with:
+          username: ${{ secrets.taesaeng28 }}
+          password: ${{ secrets.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 }}
+    
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag taesaeng28/smartcard:$(date +%s)
+    - name: Push the Docker image
+      run: docker push taesaeng28/smartcard:$(date +%s)
