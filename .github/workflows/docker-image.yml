@@ -25,8 +25,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push Version:$(date +%s)
+        name: Build and push
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: taesaeng28/smartcard:$(date +%s)
+          tags: taesaeng28/smartcard
