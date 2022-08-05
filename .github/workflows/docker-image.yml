@@ -16,8 +16,8 @@ jobs:
     - name: Login to DockerHub
     - uses: docker/login-action@v2
       with:
-          username: ${{ secrets.taesaeng28 }}
-          password: ${{ secrets.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 }}
+          username: taesaeng28
+          password: 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
     
     - uses: actions/checkout@v3
     - name: Build the Docker image
