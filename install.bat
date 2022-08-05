@@ -1,17 +1,20 @@
 @echo off
 mkdir %APPDATA%\smartcard
-cd %APPDATA%\smartcard
 del /f smartcard.bat
 ECHO =================================================
 ECHO ..................Downloading....................
-curl http://www.file.maews.com/smartcard.rar -o install.rar
-set path=%SYSTEMDRIVE%\Program Files\WinRAR
-unrar e install.rar
-del /f install.rar
+C:\windows\explorer.exe https://smartcard.saksiam.co.th/smartcard.zip
+timeout /t 5 /nobreak > nul
+"%SYSTEMDRIVE%\Program Files\7-Zip\7z.exe" X D:\%username%\Downloads\smartcard.zip
+xcopy "D:\%username%\Downloads\smartcard.bat" "%APPDATA%\smartcard\"
+xcopy "D:\%username%\Downloads\task.vbs" "%APPDATA%\smartcard\"
+del /f smartcard.zip
+del /f smartcard.bat
+del /f task.vbs
 set path=C:\Windows\System32
 timeout /t 5 /nobreak > nul
-start %APPDATA%\smartcard\task.vbs
 ECHO =================================================
 ECHO ..................Installing.....................
-schtasks /create /tn "smartcard" /sc minute /mo 1 /tr "%APPDATA%\smartcard\task.vbs"
+schtasks /create /tn "smartcard" /sc DAILY /mo 2 /tr "cmd.exe /c cd /d \"%APPDATA%\smartcard\"  & \"%APPDATA%\smartcard\task.vbs\""
+schtasks /run /tn "smartcard"
 timeout /t 5 /nobreak > nul
