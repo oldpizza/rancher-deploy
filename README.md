@@ -1,12 +1,12 @@
-SAKSIAM THAI ID CARD
+**<h1>SAKSIAM THAI ID CARD</h1>** <br>
+Version :1.0.1#7 DEC 2022<br>
+<sup>Saksiam Leasing Public Company Limited. All Rights Reserved. </sup>
 
-![คู่มือการใช้งานเครื่องอ่านบัตรแก้ไข Ver 1](https://user-images.githubusercontent.com/85404654/206090791-5ab9db08-880a-4636-a632-ce83ef79110f.jpg)
+<h4>==== URL ENV ====</h4><br>
+-PRD > https://smartcard.saksiam.co.th <br>
+-UAT > https://smartcard-uat.saksiam.co.th <br>
+-DEV > https://smartcard-dev.saksiam.co.th <br>
 
-==== URL ENV ====
--PRD : https://smartcard.saksiam.co.th
--UAT : https://smartcard-uat.saksiam.co.th
--DEV : https://smartcard-dev.saksiam.co.th
-
-
-=== Doc ====
+<h4>=== Doc ====</h4><br>
+![คู่มือการใช้งานเครื่องอ่านบัตรแก้ไข Ver 1](https://user-images.githubusercontent.com/85404654/206092366-682d2bfe-6778-4145-bdf9-b3b6a0272ba8.jpg)
 [คู่มือการใช้งานเครื่องอ่านบัตร Ver.1.1.0.pdf](https://github.com/SAKSIAM-TECH/smartcard/files/10172867/Ver.1.1.0.pdf)
