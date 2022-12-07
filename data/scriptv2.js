@@ -222,6 +222,7 @@ function GetFormatedDateOfBirth(expDate) {
 // address[5] == ตำบล
 // address[6] == อำเภอ
 // address[7] == จังหวัด
+//
 
 function Getaddress(Address) {
   let txt = Address
