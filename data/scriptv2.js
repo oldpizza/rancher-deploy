@@ -214,11 +214,19 @@ function GetFormatedDateOfBirth(expDate) {
       return dateExpire + "/" + monthExpire + "/" + yearExpire;
   }
 }
+// address[0] == เลขที่
+// address[1] == หมู่ที่
+// address[2] == 
+// address[3] == ซอย
+// address[4] == 
+// address[5] == ตำบล
+// address[6] == อำเภอ
+// address[7] == จังหวัด
 
 function Getaddress(Address) {
   let txt = Address
   const address = txt.split('#');
-  var Roads = isNull(address[3]);
+  var Roads = isNull(address[2]);
 
   document.getElementById(idinput[5]).style.visibility = "visible";
   document.getElementById(idinput[5]).focus();
