@@ -1,49 +1,12 @@
+SAKSIAM THAI ID CARD
 
-oooooo
- 
-ติดตั้งผ่านไฟล์ install.bat0
+![คู่มือการใช้งานเครื่องอ่านบัตรแก้ไข Ver 1](https://user-images.githubusercontent.com/85404654/206090791-5ab9db08-880a-4636-a632-ce83ef79110f.jpg)
 
-...............................................................
-
-
-การ config ต่างๆ ในไฟล์ install.bat
-
-mkdir = สร้าง folder ตาม path
-cd = ย้ายไปยัง path ที่เราสร้าง
-curl = ตำแหน่งไฟล์ที่จะไป download มา -o = เปลี่ยนชื่อไฟล์ที่ download มา
-set path ของ winrar เพื่อใช้ในการแตกไฟล์
-schtasks ตั้ง task เพื่อติดตั้งตามเวลาที่กำหนด
-
-...............................................................
+==== URL ENV ====
+-PRD : https://smartcard.saksiam.co.th
+-UAT : https://smartcard-uat.saksiam.co.th
+-DEV : https://smartcard-dev.saksiam.co.th
 
 
-การ config ต่างๆ ในไฟล์ task.vbs
-
-แก้ path ในการ run ไฟล์ = WshShell.Run chr(34) & "...path..." & Chr(34), 0
-
-
-..............................................................
-
-
-การ config ต่่างๆ ในไฟล์ smartcard.bat
-
-mkdir = สร้าง folder ตาม path
-cd = ย้ายไปยัง path ที่เราสร้าง
-curl = ตำแหน่งไฟล์ที่จะไป download มา -o = เปลี่ยนชื่อไฟล์ที่ download มา
-set path ของ winrar เพื่อใช้ในการแตกไฟล์
-
-.........................___..................................
-
-
-การสร้าง shortcut เพื่อนำไปใช้ใน startup 
-
-echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
-echo sLinkFile = "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\smartcard.lnk" >> %SCRIPT%
-echo Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
-echo oLink.TargetPath = "%APPDATA%\smartcard\frontagent.exe" >> %SCRIPT%
-echo oLink.WorkingDirectory ="%APPDATA%\smartcard" >> %SCRIPT%
-echo oLink.Save >> %SCRIPT%
-cscript /nologo %SCRIPT%\
-
-.........................___..................................
-
+=== Doc ====
+[คู่มือการใช้งานเครื่องอ่านบัตร Ver.1.1.0.pdf](https://github.com/SAKSIAM-TECH/smartcard/files/10172867/Ver.1.1.0.pdf)
