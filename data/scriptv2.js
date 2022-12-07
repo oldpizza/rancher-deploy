@@ -201,7 +201,7 @@ function GetFnameEN(FnameEN) {
 }
 
 function GetFormatedDateOfBirth(expDate) {
-  if (expDate == 9999999) {
+  if (expDate == '99999999') {
       var yearExpire = 9999;
       var monthExpire = 12;
       var dateExpire = 31;
