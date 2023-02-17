@@ -1,4 +1,4 @@
-name: Deploy-Dev
+name: Docker-DEV
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -8,6 +8,8 @@ name: Deploy-Dev
 on:
   push:
     branches: [dev]
+    # Publish semver tags as releases.
+    # tags: [ 'v*.*.*' ]
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -19,7 +21,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -27,10 +29,9 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
 
-     # ส่ง docker image tag ออกไปเป็น output ของ build job
     outputs:
       image_tags: ${{ steps.meta.outputs.tags }}
-      
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -39,9 +40,9 @@ jobs:
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
         if: github.event_name != 'pull_request'
-        uses: sigstore/cosign-installer@7e0881f8fe90b25e305bbf0309761e9314607e25
+        uses: sigstore/cosign-installer@f3c664df7af409cb4873aa5068053ba9d61a57b6 #v2.6.0
         with:
-          cosign-release: 'v1.9.0'
+          cosign-release: 'v1.11.0'
 
 
       # Workaround: https://github.com/docker/build-push-action/issues/461
@@ -85,7 +86,7 @@ jobs:
     # ทำหลังจาก job build ทำงานเสร็จแล้ว
     needs: build
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Setup
