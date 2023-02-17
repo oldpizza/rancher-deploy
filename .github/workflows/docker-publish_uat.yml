@@ -77,3 +77,46 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  # patch docker image ใน gitops repository เพื่อให้ CD ทำงาน
+  deploy:
+    # ทำหลังจาก job build ทำงานเสร็จแล้ว
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup
+        run: |
+          git config --global user.name "Github Actions"
+          git config --global user.email "actions@github.com"
+      # checkout gitops repository ที่จะทำการ patch
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.repository_owner }}/sak-gitops
+          ref: main
+          # เพิ่ม GH_PAT secrets ที่ใช้ในการ clone ไว้ใน settings ของ repository
+          token: ${{ secrets.GH_PAT }}
+
+      - uses: imranismail/setup-kustomize@v1
+
+      # หากสร้าง release เวอร์ชั่น beta (tag 'v<maj>.<min>.<pat>-beta<num>')
+      # ให้ deploy ไปที่ uat environment
+      - name: Deploy UAT
+        if: ${{ contains(github.event.release.tag_name, '-beta') }}
+        run: |
+          cd apps/overlays/uat/sak-smartcard
+          kustomize edit set image ${{ needs.build.outputs.image_tags }}
+          git add .
+          git commit -m "Set 'web' image tag to '${{ needs.build.outputs.image_tags }}'"
+      # หากสร้าง release เวอร์ชั่นเต็ม (tag 'v<maj>.<min>.<pat>')
+      # ให้ update GitOps repository (prod) แต่จะ deploy อัตโนมัติหรือไม่ขึ้นอยู่กับการ config ของฝั่ง ArgoCD
+      - name: Update Production GitOps
+        if: ${{ !contains(github.event.release.tag_name, '-beta') }}
+        run: |
+          cd apps/overlays/prod/sak-smartcard
+          kustomize edit set image ${{ needs.build.outputs.image_tags }}
+          git add .
+          git commit -m "Set 'web' image tag to '${{ needs.build.outputs.image_tags }}'"
+      - run: git push
