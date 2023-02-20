@@ -8,6 +8,7 @@ const idinput = [
     '5fc85ea1-4f52-3aec-bae9-7e7bbeaf1345_1ca923f6-802c-9201-df0b-6e5f6c12f6cf', //ตำบล
     '5fc85ea1-4f52-3aec-bae9-7e7bbeaf1345_147346c7-b882-78f3-39d7-db8292313554', //อำเภอ
     '5fc85ea1-4f52-3aec-bae9-7e7bbeaf1345_01d897b9-806e-3e0d-eeee-10eaf72c706a', //จังหวัด
+    '5fc85ea1-4f52-3aec-bae9-7e7bbeaf1345_ed8fd95d-4496-c2bb-a8ed-fbcdd8aa79e2' //คำนำหน้า
 ];
 
 
@@ -53,8 +54,8 @@ function GetFnameTH(FnameTH) {
     const nameth = txt.split('#');
     // console.log(nameth[1])
 
-    // document.getElementById(idinput[1]).focus();
-    // document.getElementById(idinput[1]).value = nameth[0];
+    document.getElementById(idinput[9]).focus();
+    document.getElementById(idinput[9]).value = nameth[0];
 
     document.getElementById(idinput[1]).focus();
     document.getElementById(idinput[1]).value = nameth[1];
