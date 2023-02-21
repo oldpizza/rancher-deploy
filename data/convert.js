@@ -3,26 +3,38 @@ const uploadFunction = event => {
     const data = new FormData()
     data.append('file', files[0])
 
-    fetch('https://apipy-dev.saksiam.co.th/File', {
+    const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/File', {
         method: 'POST',
         body: data
     })
-        .then(response => response.json())
-        .then(data => {
-            var json = JSON.parse(data)
-            var array = json.map(doc => Object.values(doc));
-            const result = array.map(subArray => subArray.join('|')).join(',');
-            var convert = result.split(',');
-            const list = convert.map(x => [x]);
 
-            // downloadCSV(csv)
-            // console.log(newArr)
-            const csv = listToCSV(list);
-            downloadCSV(csv);
-        })
-        .catch(error => {
-            console.error(error)
-        })
+    fetchPromise.then(response => {
+        Swal.fire(
+            'เสร็จสิ้น',
+            'สร้างไฟล์เรียบร้อยแล้ว',
+            'success'
+        )
+        return response.json()
+    }).then(data => {
+        var json = JSON.parse(data)
+        var array = json.map(doc => Object.values(doc));
+        const result = array.map(subArray => subArray.join('|')).join(',');
+        var convert = result.split(',');
+        const list = convert.map(x => [x]);
+
+        // downloadCSV(csv)
+        // console.log(newArr)
+        const csv = listToCSV(list);
+        downloadCSV(csv);
+    }).catch(error => {
+        console.error(error)
+    })
+
+    Swal.fire(
+        'กรุณารอสักครู่',
+        'กำลังสร้างไฟล์',
+        'question'
+    )
 }
 
 // uploadFunction()
