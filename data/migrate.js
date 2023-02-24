@@ -40,6 +40,7 @@ const uploadFunction = event => {
             }
         ).then((result) => {
             if (result.isConfirmed) {
+                localStorage.clear()
                 migrate(json)
             }
         })
@@ -92,7 +93,7 @@ const migrate = async json => {
         }).then(data => {
             var jsons = JSON.parse(data)
             var Returndata = ReturnData(jsons)
-            localStorage.setItem(json[userID].user, json[userID].user + '  |  ' + Returndata)
+            localStorage.setItem(json[userID].user, json[userID].user + '|' + Returndata)
             if (parseInt(userID + 1) == json.length) {
                 allStorage()
             }
