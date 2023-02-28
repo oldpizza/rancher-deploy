@@ -7,7 +7,9 @@ const uploadFunction = event => {
     data.append('file', files[0])
     // data.append('NameSheet', document.getElementById("NameSheet").value)
 
-    const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/File', {
+    const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/File?' + new URLSearchParams({
+        code: '0'
+    }), {
         method: 'POST',
         body: data
     })
