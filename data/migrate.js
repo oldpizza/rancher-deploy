@@ -106,7 +106,7 @@ const migrate = async json => {
             'กำลังโยกย้าย',
             'question'
         )
-        await delay(3000)
+        await delay(1000)
     }
 }
 
