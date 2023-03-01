@@ -5,7 +5,6 @@ const uploadFunction = event => {
     const files = event.target.files
     const data = new FormData()
     data.append('file', files[0])
-    // data.append('NameSheet', document.getElementById("NameSheet").value)
 
     const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/File?' + new URLSearchParams({
         code: '0'
@@ -64,9 +63,10 @@ document.querySelector('#upload').addEventListener('change', event => {
 
 const migrate = async json => {
     for (var userID = 0; userID < json.length; userID++) {
+        var branchType = BranchType(json[userID].branch)
         const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/Migrate?' + new URLSearchParams({
             user: json[userID].user,
-            branch: json[userID].branch,
+            branch: branchType,
             role: json[userID].role,
             startDate: json[userID].startDate,
             endDate: json[userID].endDate,
@@ -106,7 +106,16 @@ const migrate = async json => {
             'กำลังโยกย้าย',
             'question'
         )
-        await delay(1000)
+        await delay(3000)
+    }
+}
+
+const BranchType = data => {
+    var dataType = String(data)
+    if (dataType.length == 4) {
+        return data
+    } else {
+        return '0' + data
     }
 }
 
