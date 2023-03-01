@@ -60,7 +60,7 @@ document.querySelector('#upload').addEventListener('change', event => {
 })
 
 const listToCSV = list => {
-    const rows = list.map(row => row.join('""'));
+    const rows = list.map(row => row);
     return rows.join('\n');
 }
 
