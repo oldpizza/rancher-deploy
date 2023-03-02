@@ -79,9 +79,13 @@
         <script src="
         https://cdn.jsdelivr.net/npm/dotenv@16.0.3/lib/main.min.js
          "></script>
-    <script>
-        console.log(process.env.HOST_URL)
-    </script>
+        <script>
+            const test = event => {
+                console.log(process.env.HOST_URL)
+            }
+
+            test()
+        </script>
 </body>
 
 </html>
