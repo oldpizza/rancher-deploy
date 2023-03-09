@@ -1,7 +1,7 @@
+let enhancer = null;
 document.getElementById('start').onclick = () => {
     document.getElementById('text').focus();
     document.getElementById('text').value = 'start';
-    let enhancer = null;
     (async () => {
         enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
         document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
