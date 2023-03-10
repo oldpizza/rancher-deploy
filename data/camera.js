@@ -1,27 +1,8 @@
-let enhancer = null;
-document.getElementById('start').onclick = () => {
-    document.getElementById('text').focus();
-    document.getElementById('text').value = 'start';
-    (async () => {
-        enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-        document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
-        await enhancer.open(true);
-    })();
-}
+let input = document.getElementById("inputTag");
+let imageName = document.getElementById("imageName")
 
-document.getElementById('capture').onclick = () => {
-    if (enhancer) {
-        let frame = enhancer.getFrame();
+input.addEventListener("change", () => {
+    let inputImage = document.querySelector("input[type=file]").files[0];
 
-        let width = screen.availWidth;
-        let height = screen.availHeight;
-        let popW = 640, popH = 640;
-        let left = (width - popW) / 2;
-        let top = (height - popH) / 2;
-
-        popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
-            ',top=' + top + ',left=' + left + ', scrollbars=yes');
-
-        popWindow.document.body.appendChild(frame.canvas);
-    }
-};
+    imageName.innerText = inputImage.name;
+})
