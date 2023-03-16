@@ -6,7 +6,7 @@ const uploadFunction = event => {
     const data = new FormData()
     data.append('file', files[0])
 
-    const fetchPromise = fetch('http://localhost:12345/File?' + new URLSearchParams({
+    const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/File?' + new URLSearchParams({
         code: '0'
     }), {
         method: 'POST',
@@ -67,7 +67,7 @@ const migrate = async json => {
         var dateType = DateType(json[userID].create_date)
         var asset_StatusType = Asset_StatusType(json[userID].Asset_Status)
         console.log(userID)
-        const fetchPromise = fetch('http://localhost:12345/Migrate_No_Assets?' + new URLSearchParams({
+        const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/Migrate_No_Assets?' + new URLSearchParams({
             p_CoCd: json[userID].CoCd
             , p_Class: json[userID].Class
             , p_Asset: json[userID].Asset
