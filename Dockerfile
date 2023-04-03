@@ -2,35 +2,35 @@
 # ADD ./data/* /usr/share/nginx/html/
 
 # # COPY nginx.conf /etc/nginx/nginx.conf
-# Base image
-FROM node:14-alpine AS build
+# Use an official Node.js runtime as a parent image
+FROM node:14
 
-# Set working directory
+# Set the working directory to /app
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
 
-# Install dependencies
+# Install app dependencies
 RUN npm install
 
-# Copy the app files
+# Copy the rest of the application files to the container
 COPY . .
 
-# Build the app
+# Build the React app
 RUN npm run build
 
-# Stage 2: Nginx image
-FROM nginx:alpine
+# Use an official Nginx image as a parent image
+FROM nginx:1.21.3
 
-# Copy the build files to Nginx directory
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Copy Nginx config file
+# Copy the default Nginx configuration file to the container
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy the built app from the previous stage to the Nginx document root
+COPY --from=0 /app/build /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
 
-# Start Nginx server
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
