@@ -1,5 +1,5 @@
 // Import the dotenv package
-const dotenv = require('./node_modules/dotenv');
+import dotenv from 'dotenv';
 dotenv.config();
 
 // // Access the environment variables
