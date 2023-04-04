@@ -1,8 +1,6 @@
 // Import the dotenv package
-const dotenv = require('../smartcard/dotenv');
-
-// Load the environment variables from the .env file into process.env
+const dotenv = require('./node_modules/dotenv');
 dotenv.config();
 
-// Access the environment variables
-const myVar = process.env.MY_VARIABLE;
+// // Access the environment variables
+// const myVar = process.env.MY_VARIABLE;
