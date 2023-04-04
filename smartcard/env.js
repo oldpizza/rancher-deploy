@@ -1,5 +1,5 @@
 // Import the dotenv package
-import dotenv from '/dotenv';
+import dotenv from './dotenv';
 dotenv.config();
 
 // // Access the environment variables
