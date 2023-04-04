@@ -1,5 +1,6 @@
 FROM nginx:alpine
 ADD ./smartcard/* /usr/share/nginx/html/smartcard/
+ADD ./reservation/* /usr/share/nginx/html/reservation/
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 # # Use an official Node.js runtime as a parent image
