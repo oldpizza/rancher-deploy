@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 function test() {
     console.log(process.env.HOST_URL)
 }
