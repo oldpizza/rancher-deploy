@@ -1,5 +1,5 @@
 // Import the dotenv package
-const dotenv = require('./dotenv');
+const dotenv = require('../smartcard/dotenv');
 
 // Load the environment variables from the .env file into process.env
 dotenv.config();
