@@ -1,4 +1,4 @@
-import dotenv from './dotenv';
-dotenv.config()
+require('dotenv').config()
+console.log(process.env)
 
 console.log(process.env.HOST_URL)
