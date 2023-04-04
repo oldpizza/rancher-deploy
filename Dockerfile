@@ -1,5 +1,5 @@
 FROM nginx:alpine
-ADD ./data/* /usr/share/nginx/html/
+ADD ./smartcard/* /usr/share/nginx/html/smartcard/
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 # # Use an official Node.js runtime as a parent image
