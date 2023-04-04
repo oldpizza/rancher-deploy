@@ -1,4 +1,8 @@
-require('./dotenv').config()
-console.log(process.env)
+// Import the dotenv package
+const dotenv = require('dotenv');
 
-console.log(process.env.HOST_URL)
+// Load the environment variables from the .env file into process.env
+dotenv.config();
+
+// Access the environment variables
+const myVar = process.env.MY_VARIABLE;
