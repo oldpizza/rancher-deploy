@@ -27,9 +27,9 @@ const uploadFunction = event => {
         // var json = JSON.parse(data)
 
         document.getElementById('a793659f-9f03-b706-b925-29f73d62cf7c_f35c400f-8329-fcc9-85ef-ca73982db6dc').focus();
-        document.getElementById('a793659f-9f03-b706-b925-29f73d62cf7c_f35c400f-8329-fcc9-85ef-ca73982db6dc').innerHTML = data;
+        document.getElementById('a793659f-9f03-b706-b925-29f73d62cf7c_f35c400f-8329-fcc9-85ef-ca73982db6dc').innerHTML = data[0];
 
-        console.log(data)
+        console.log(data[0])
     }).catch(error => {
         console.error(error)
     })
