@@ -216,7 +216,7 @@ function GetFormatedDateOfBirth(expDate) {
 }
 // address[0] == เลขที่
 // address[1] == หมู่ที่
-// address[2] == 
+// address[2] == ถนน
 // address[3] == ซอย
 // address[4] == 
 // address[5] == ตำบล
