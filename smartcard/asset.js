@@ -27,6 +27,7 @@ const uploadFunction = event => {
         var json = JSON.stringify(data)
         document.getElementById('785af95c-e63a-c890-96bb-4977c188de66_7c1dc1b6-eb3e-2dbf-4a0d-e35e90a126ce_TextArea').focus();
         document.getElementById('785af95c-e63a-c890-96bb-4977c188de66_7c1dc1b6-eb3e-2dbf-4a0d-e35e90a126ce_TextArea').value = json;
+        console.log(json)
     }).catch(error => {
         console.error(error)
     })
