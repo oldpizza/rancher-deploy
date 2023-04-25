@@ -93,11 +93,11 @@ function GetFnameTH(FnameTH) {
     // document.getElementById(idinput[1]).focus();
     // document.getElementById(idinput[1]).value = nameth[0];
 
-    document.getElementById(idinput[2]).focus();
-    document.getElementById(idinput[2]).value = nameth[4];
+    document.getElementById(idinput[4]).focus();
+    document.getElementById(idinput[4]).value = nameth[1];
 
-    document.getElementById(idinput[3]).focus();
-    document.getElementById(idinput[3]).value = nameth[5];
+    document.getElementById(idinput[5]).focus();
+    document.getElementById(idinput[5]).value = nameth[3];
 
 }
 // address[0] == เลขที่
