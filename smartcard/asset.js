@@ -24,9 +24,10 @@ const uploadFunction = event => {
             )
         }
     }).then(async data => {
-        var json = JSON.stringify(data) 
+        var json = JSON.parse(data)
+        const jsons = JSON.stringify(json)
         document.getElementById('785af95c-e63a-c890-96bb-4977c188de66_7c1dc1b6-eb3e-2dbf-4a0d-e35e90a126ce_TextArea').focus();
-        document.getElementById('785af95c-e63a-c890-96bb-4977c188de66_7c1dc1b6-eb3e-2dbf-4a0d-e35e90a126ce_TextArea').value = json;
+        document.getElementById('785af95c-e63a-c890-96bb-4977c188de66_7c1dc1b6-eb3e-2dbf-4a0d-e35e90a126ce_TextArea').value = jsons;
     }).catch(error => {
         console.error(error)
     })
