@@ -21,7 +21,7 @@ document.getElementById(
 };
 
 function load_data() {
-    fetch("https://local.saksiam.co.th.:9998/get_data˝",
+    fetch("https://local.saksiam.co.th.:9998/get_data",
         {
             method: "GET",
             mode: "cors",
