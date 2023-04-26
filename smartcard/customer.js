@@ -46,6 +46,7 @@ function load_data() {
         return response.json();
     }).then(function (json) {
 
+        GetGenDer(json.CMD_GENDER)
         GetFnameTH(json.CMD_THFULLNAME)
         Getaddress(json.CMD_ADDRESS)
 
@@ -89,6 +90,10 @@ function getFormatedDateOfBirth(expDate) {
     var dateExpire = expDate.slice(6, 8);
 
     return dateExpire + "/" + monthExpire + "/" + yearExpire;
+}
+
+function GetGenDer(GenDer) {
+    console.log(GenDer)
 }
 
 function GetFnameTH(FnameTH) {
