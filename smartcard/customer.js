@@ -94,15 +94,17 @@ function getFormatedDateOfBirth(expDate) {
 
 function GetGenDer(GenDer) {
     if (GenDer == '1') {
-        document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').focus();
+        console.log('1')
+        // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').focus();
         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').checked = true
-        document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').focus();
+        // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').focus();
         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').checked = false
     }
     else {
-        document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').focus();
+        console.log('2')
+        // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').focus();
         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').checked = false
-        document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').focus();
+        // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').focus();
         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').checked = true
     }
 }
