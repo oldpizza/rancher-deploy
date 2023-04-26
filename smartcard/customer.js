@@ -12,6 +12,13 @@ const idinput = [
     "a8a5ecc1-7a50-49ae-8b9f-0b2b34e214d8_4d43c6c3-ad79-44ad-b4e0-dff49c0285e0", // ตำบล
     "a8a5ecc1-7a50-49ae-8b9f-0b2b34e214d8_b6766f8f-a5bf-dfa7-dd71-584941221a59", // อำเภอ
     "a8a5ecc1-7a50-49ae-8b9f-0b2b34e214d8_84849231-1860-cebb-8a1f-cf5d5ea40c7f", // จังหวัด
+    "fac4cfa6-e7ce-4987-9252-c00b262fe085_e7af9302-2d43-404f-97d3-320887a687ee",  // ที่อยู่1 13
+    "fac4cfa6-e7ce-4987-9252-c00b262fe085_e4a5172a-1e34-48db-a3eb-67f2286e8806", // หมู่1
+    "fac4cfa6-e7ce-4987-9252-c00b262fe085_f3d8eb96-28fa-4a4c-a854-36caaed19a4a", // ซอย1
+    "fac4cfa6-e7ce-4987-9252-c00b262fe085_98cdeaba-1463-4766-a0bd-9fd1e7468abf", //ถนนๅ1
+    "fac4cfa6-e7ce-4987-9252-c00b262fe085_29dedd81-2632-46e5-8d91-f965bee2fc57", // ตำบล1
+    "fac4cfa6-e7ce-4987-9252-c00b262fe085_2849ed18-3767-4976-bd5d-d9de5a5b1418", // อำเภอ1
+    "fac4cfa6-e7ce-4987-9252-c00b262fe085_015965db-faf8-4457-a98c-6d79ffe89ddb", // จังหวัด1
 ];
 
 document.getElementById(
@@ -132,6 +139,25 @@ function Getaddress(Address) {
 
     document.getElementById(idinput[12]).focus();
     document.getElementById(idinput[12]).value = address[7].substring(7);
+    //
+    //
+    document.getElementById(idinput[13]).focus();
+    document.getElementById(idinput[13]).value = address[0];
+
+    document.getElementById(idinput[16]).focus();
+    document.getElementById(idinput[16]).value = Roads;
+
+    document.getElementById(idinput[18]).focus();
+    document.getElementById(idinput[18]).value = address[6].substring(5);
+
+    document.getElementById(idinput[14]).focus();
+    document.getElementById(idinput[14]).value = address[1].substring(8);
+
+    document.getElementById(idinput[17]).focus();
+    document.getElementById(idinput[17]).value = address[5].substring(4);
+
+    document.getElementById(idinput[19]).focus();
+    document.getElementById(idinput[19]).value = address[7].substring(7);
 
 }
 
