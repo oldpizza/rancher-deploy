@@ -93,14 +93,14 @@ function getFormatedDateOfBirth(expDate) {
 }
 
 function GetGenDer(GenDer) {
-    if (GenDer == 1) {
+    // if (GenDer == 1) {
         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base').checked = true
         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1_base').checked = false
-    }
-    else {
-        document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base').checked = false
-        document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1_base').checked = true
-    }
+    // }
+    // else {
+    //     document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base').checked = false
+    //     document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1_base').checked = true
+    // }
 }
 
 function GetFnameTH(FnameTH) {
