@@ -19,6 +19,7 @@ const idinput = [
     "fac4cfa6-e7ce-4987-9252-c00b262fe085_29dedd81-2632-46e5-8d91-f965bee2fc57", // ตำบล1
     "fac4cfa6-e7ce-4987-9252-c00b262fe085_2849ed18-3767-4976-bd5d-d9de5a5b1418", // อำเภอ1
     "fac4cfa6-e7ce-4987-9252-c00b262fe085_015965db-faf8-4457-a98c-6d79ffe89ddb", // จังหวัด1
+    "c66f0566-bff3-49d8-bef5-64460f6108ea_d9ed639a-8def-433b-88fe-3b7ddbef93f8" 
 ];
 
 document.getElementById(
@@ -115,8 +116,8 @@ function GetFnameTH(FnameTH) {
     const nameth = txt.split('#');
     // console.log(nameth[1])
 
-    // document.getElementById(idinput[1]).focus();
-    // document.getElementById(idinput[1]).value = nameth[0];
+    document.getElementById(idinput[20]).focus();
+    document.getElementById(idinput[20]).value = nameth[0];
 
     document.getElementById(idinput[4]).focus();
     document.getElementById(idinput[4]).value = nameth[1];
