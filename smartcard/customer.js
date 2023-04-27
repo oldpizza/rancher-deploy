@@ -69,7 +69,7 @@ function load_data() {
 
         const Gender = json.CMD_GENDER;
 
-        if(Gender = '1'){
+        if(Gender == '1'){
             console.log("1")
             document.getElementById("e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base").focus();
             document.getElementById("e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base").checked = true;
