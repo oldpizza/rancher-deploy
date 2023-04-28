@@ -67,17 +67,6 @@ function load_data() {
         document.getElementById(idinput[3]).focus();
         document.getElementById(idinput[3]).value = expDate;
 
-        const Gender = json.CMD_GENDER;
-
-        if(Gender == '1'){
-            console.log("1")
-            // document.querySelector("e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base").focus();
-            document.querySelector("e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base").checked = true;
-        }else{
-            console.log("2")
-            // document.querySelector("e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1_base").focus();
-            document.querySelector("e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1_base").checked = true;
-        }
     });
 }
 
@@ -104,23 +93,6 @@ function getFormatedDateOfBirth(expDate) {
 
     return dateExpire + "/" + monthExpire + "/" + yearExpire;
 }
-
-// function GetGenDer(GenDer) {
-//     if (GenDer == '1') {
-//         console.log('1')
-//         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base').focus();
-//         document.getElementById("e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0_base").checked == true;
-//         // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').focus();
-//         // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1').checked = false
-//     }
-//     else {
-//         console.log('2')
-//         // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').focus();
-//         // document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_0').checked = false
-//         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1_base').focus();
-//         document.getElementById('e8d81019-03b4-4396-bf0b-856e51edeea7_6dddfcc4-4464-4526-98aa-33971faae135_radioButtonItem_1_base').checked == true;
-//     }
-// }
 
 function GetFnameTH(FnameTH) {
     // console.log(FnameTH)
