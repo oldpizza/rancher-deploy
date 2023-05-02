@@ -7,10 +7,11 @@ COPY nginx/default.template.conf /etc/nginx/conf.d/default.template
 
 RUN envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+USER nginx
+# EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
-# # Use an official Node.js runtime as a parent image
+# Use an official Node.js runtime as a parent image
 # FROM node:14
 
 # # Set the working directory to /app
