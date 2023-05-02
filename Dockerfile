@@ -1,5 +1,5 @@
 FROM nginx:alpine
-# USER app
+USER nginx
 # WORKDIR /app
 
 ADD ./smartcard/* /usr/share/nginx/html/smartcard/
