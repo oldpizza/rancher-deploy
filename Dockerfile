@@ -7,6 +7,7 @@ ADD ./reservation/* /usr/share/nginx/html/reservation/
 
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/default.conf /etc/nginx/site/default.conf
+COPY ./nginx/default.template.conf /etc/nginx/site/default.template
 
 # COPY nginx.conf /etc/nginx/nginx.conf
 # COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
