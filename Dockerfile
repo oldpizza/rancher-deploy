@@ -1,13 +1,14 @@
 FROM nginx:alpine
 USER nginx
+WORKDIR /app
+
+RUN chown -R nginx:nginx /app
 
 ADD ./smartcard/* /usr/share/nginx/html/smartcard/
 ADD ./reservation/* /usr/share/nginx/html/reservation/
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY ./nginx/default.template.conf /etc/nginx/conf.d/default.template
-WORKDIR /app
-
 # RUN "/bin/sh -c envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf"
 # EXPOSE 80
 CMD [ "/bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"" ]
