@@ -1,4 +1,6 @@
 FROM nginx:alpine
+USER nginx
+
 ADD ./smartcard/* /usr/share/nginx/html/smartcard/
 ADD ./reservation/* /usr/share/nginx/html/reservation/
 
@@ -7,7 +9,6 @@ COPY nginx/default.template.conf /etc/nginx/conf.d/default.template
 
 RUN envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf
 
-USER nginx
 # EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
