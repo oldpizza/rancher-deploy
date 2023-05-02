@@ -5,7 +5,7 @@ ADD ./reservation/* /usr/share/nginx/html/reservation/
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY nginx/default.template.conf /etc/nginx/conf.d/default.template
 
-RUN envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf '
+RUN envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf
 # # Use an official Node.js runtime as a parent image
 # FROM node:14
 
