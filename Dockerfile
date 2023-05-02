@@ -1,8 +1,6 @@
 FROM nginx:alpine
-USER nginx
-WORKDIR /app
-
-RUN chown -R nginx:nginx /app
+# USER app
+# WORKDIR /app
 
 ADD ./smartcard/* /usr/share/nginx/html/smartcard/
 ADD ./reservation/* /usr/share/nginx/html/reservation/
