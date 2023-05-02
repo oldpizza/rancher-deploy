@@ -10,7 +10,7 @@ WORKDIR /app
 
 # RUN "/bin/sh -c envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf"
 # EXPOSE 80
-CMD [ "/bin/sh -c envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf" ]
+CMD [ "/bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"" ]
 # CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 # CMD ["nginx", "-g", "daemon off;"]
 # Use an official Node.js runtime as a parent image
