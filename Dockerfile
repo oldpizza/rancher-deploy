@@ -5,7 +5,8 @@ USER nginx
 ADD ./smartcard/* /usr/share/nginx/html/smartcard/
 ADD ./reservation/* /usr/share/nginx/html/reservation/
 
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+# COPY nginx.conf /etc/nginx/nginx.conf
+# COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 # COPY ./nginx/default.template.conf /etc/nginx/conf.d/default.template
 # RUN "/bin/sh -c envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf"
 # EXPOSE 80
