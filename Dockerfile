@@ -9,7 +9,7 @@ COPY ./nginx/default.template.conf /etc/nginx/conf.d/default.template
 
 # RUN "/bin/sh -c envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf"
 # EXPOSE 80
-CMD [ "/bin/bash -c "envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"" ]
+CMD [ "/bin/bash -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"" ]
 # CMD ["nginx", "-g", "daemon off;"]
 # Use an official Node.js runtime as a parent image
 # FROM node:14
