@@ -17,7 +17,7 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;`
-        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").focus();
+        // document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").focus();
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").value = dateImg;
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").disabled = true;
 
