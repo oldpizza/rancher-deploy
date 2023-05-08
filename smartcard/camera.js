@@ -18,7 +18,7 @@ input.addEventListener("change", () => {
         // proImage.width = 640;
         // proImage.height = 480;`
         imageName.focus();
-        imageName.innerHTML = dateImg.toString;
+        imageName.innerHTML = dateImg;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
         //     ',top=' + top + ',left=' + left + ', scrollbars=yes');
