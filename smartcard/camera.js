@@ -1,5 +1,5 @@
 let input = document.getElementById("inputTag");
-let imageName = document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458")
+let imageName = document.getElementById("00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a")
 // width = screen.availWidth;
 // height = screen.availHeight;
 // popW = 640, popH = 480;
@@ -17,9 +17,8 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;`
-        // document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").focus();
-        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").value = dateImg;
-        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").disabled = true;
+        imageName.focus();
+        imageName.innerText = dateImg;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
         //     ',top=' + top + ',left=' + left + ', scrollbars=yes');
