@@ -12,13 +12,14 @@ input.addEventListener("change", () => {
     var reader = new FileReader();
 
     reader.onloadend = function () {
+        var dateImg = reader.result.toString().replace(/^data:(.*,)?/, '');
         // var proImage = new Image();
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").style.visibility = "visible";
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").focus();
-        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").value = reader.result.toString().replace(/^data:(.*,)?/, '');
+        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").value = 'test';
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").disabled = true;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
