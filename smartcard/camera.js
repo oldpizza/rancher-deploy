@@ -5,6 +5,7 @@ let imageName = document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d3
 // popW = 640, popH = 480;
 // left = (width - popW) / 2;
 // top = (height - popH) / 2;
+document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").style.visibility = "hidden";
 
 input.addEventListener("change", () => {
     let inputImage = document.querySelector("input[type=file]").files[0];
@@ -15,9 +16,9 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;
-        document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458").focus();
-        document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458").value = reader.result.toString().replace(/^data:(.*,)?/, '');
-        document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458").disabled = true;
+        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").focus();
+        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").value = reader.result.toString().replace(/^data:(.*,)?/, '');
+        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").disabled = true;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
         //     ',top=' + top + ',left=' + left + ', scrollbars=yes');
