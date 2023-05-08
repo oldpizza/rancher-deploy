@@ -15,8 +15,9 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;
-        imageName.value.focus();
-        imageName.value = reader.result;
+        document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458").value.focus();
+        document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458").value = reader.result;
+        document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458").disabled = true;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
         //     ',top=' + top + ',left=' + left + ', scrollbars=yes');
@@ -24,6 +25,7 @@ input.addEventListener("change", () => {
         // popWindow.document.body.appendChild(proImage);
         document.getElementById('f41ea8a5-fc0c-5824-b7b0-ed6229f31640_74c8f94d-26fa-8ee9-f6fd-1d017102a329_Picture').focus();
         document.getElementById('f41ea8a5-fc0c-5824-b7b0-ed6229f31640_74c8f94d-26fa-8ee9-f6fd-1d017102a329_Picture').src = reader.result;
+
     }
 
     reader.readAsDataURL(inputImage);
