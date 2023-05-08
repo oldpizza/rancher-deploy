@@ -15,7 +15,7 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;
-        imageName.value.focus();
+        imageName.innerHTML.focus();
         imageName.innerHTML = reader.result;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
