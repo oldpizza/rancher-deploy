@@ -5,7 +5,7 @@ let imageName = document.getElementById("00000000-0000-0000-0000-000000000000_de
 // popW = 640, popH = 480;
 // left = (width - popW) / 2;
 // top = (height - popH) / 2;
-$('#f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458').attr('readonly','readonly');
+$('#f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458').attr('readonly', 'readonly');
 
 input.addEventListener("change", () => {
     let inputImage = document.querySelector("input[type=file]").files[0];
@@ -17,6 +17,7 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;`
+        document.getElementsByClassName('00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a').title = dateImg;
         imageName.focus();
         imageName.innerHTML = dateImg;
 
