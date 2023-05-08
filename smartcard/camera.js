@@ -5,6 +5,7 @@ let imageName = document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d3
 // popW = 640, popH = 480;
 // left = (width - popW) / 2;
 // top = (height - popH) / 2;
+$('#f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d34ddfbb-6d39-b713-2f39-8312a3f0c458').attr('readonly','readonly');
 
 input.addEventListener("change", () => {
     let inputImage = document.querySelector("input[type=file]").files[0];
