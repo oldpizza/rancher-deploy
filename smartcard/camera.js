@@ -5,7 +5,6 @@ let imageName = document.getElementById("f41ea8a5-fc0c-5824-b7b0-ed6229f31640_d3
 // popW = 640, popH = 480;
 // left = (width - popW) / 2;
 // top = (height - popH) / 2;
-document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").style.visibility = "hidden";
 
 input.addEventListener("change", () => {
     let inputImage = document.querySelector("input[type=file]").files[0];
@@ -16,8 +15,7 @@ input.addEventListener("change", () => {
         // var proImage = new Image();
         // proImage.src = reader.result;
         // proImage.width = 640;
-        // proImage.height = 480;
-        document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").style.visibility = "visible";
+        // proImage.height = 480;`
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").focus();
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").value = dateImg;
         document.getElementById("00000000-0000-0000-0000-000000000000_3aa60b05-adcd-f4b1-3206-50e36f2e161b").disabled = true;
