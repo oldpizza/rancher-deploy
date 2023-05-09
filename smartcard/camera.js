@@ -11,15 +11,13 @@ input.addEventListener("change", () => {
 
     reader.onloadend = function () {
         var dateImg = reader.result.toString().replace(/^data:(.*,)?/, '');
+        var imageName = k2.controls.getLabelControlById("00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a");
         // var proImage = new Image();
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;`
-        const imageName = document.getElementById("00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a");
-        imageName.addEventListener("focus", function () {
-            this.setAttribute("title", "Some additional information");
-        });
         // document.getElementById('00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a').textContent = dateImg;
+        imageName.setValue(dateImg);
         imageName.innerHTML = dateImg;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
