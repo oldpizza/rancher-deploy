@@ -15,8 +15,8 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;`
-        document.getElementById('base64').focus();
-        document.getElementById("base64").value = dateImg;
+        document.getElementById('00000000-0000-0000-0000-000000000000_76d0d5af-a57f-62ed-f9d1-aa739d8ceb29').focus();
+        document.getElementById("00000000-0000-0000-0000-000000000000_76d0d5af-a57f-62ed-f9d1-aa739d8ceb29").value = dateImg;
         // imageName.setAttribute("title", "Some additional information");
         // document.getElementById('00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a').textContent = dateImg;
         // document.body.appendChild(imageName);
