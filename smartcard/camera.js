@@ -15,11 +15,10 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;`
-        const imageName = document.getElementById("00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a");
-        imageName.setAttribute("title", "Some additional information");
+        const imageName = document.getElementById("mySpan");
+        // imageName.setAttribute("title", "Some additional information");
         // document.getElementById('00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a').textContent = dateImg;
-        imageName.innerHTML = dateImg;
-        imageName.focus();
+        imageName.textContent = dateImg;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
         //     ',top=' + top + ',left=' + left + ', scrollbars=yes');
