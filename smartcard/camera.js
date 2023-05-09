@@ -18,7 +18,7 @@ input.addEventListener("change", () => {
         const imageName = document.getElementById("mySpan");
         // imageName.setAttribute("title", "Some additional information");
         // document.getElementById('00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a').textContent = dateImg;
-        imageName.textContent = dateImg;
+        imageName.innerHTML = dateImg;
 
         // popWindow = window.open('', 'popup', 'width=' + popW + ',height=' + popH +
         //     ',top=' + top + ',left=' + left + ', scrollbars=yes');
