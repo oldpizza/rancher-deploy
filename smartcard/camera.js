@@ -15,7 +15,7 @@ input.addEventListener("change", () => {
         // proImage.src = reader.result;
         // proImage.width = 640;
         // proImage.height = 480;`
-        const imageName = document.createElement("00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a");
+        const imageName = document.createElement("mySpan");
         // imageName.setAttribute("title", "Some additional information");
         // document.getElementById('00000000-0000-0000-0000-000000000000_def00b94-958a-bfb7-93ba-7daadbbf358a').textContent = dateImg;
         imageName.textContent = dateImg;
