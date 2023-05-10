@@ -1,9 +1,5 @@
-FROM node:16 AS build
+FROM node
 WORKDIR /app
-
-RUN apt-get update && apt-get install -y \
-    nodejs \
-    npm
     
 COPY package*.json ./
 
@@ -12,12 +8,11 @@ RUN npm install
 COPY ./smartcard/ /app/smartcard
 COPY ./reservation/ /app/reservation
 
-RUN npm run build
-
 FROM nginx:alpine
 
-COPY --from=build /app/smartcard/build/ /usr/share/nginx/html/smartcard/
-COPY --from=build /app/reservation/build/ /usr/share/nginx/html/reservation/
+RUN apt-get update && apt-get install -y \
+    nodejs \
+    npm
 # ADD ./smartcard/* /usr/share/nginx/html/smartcard/
 # ADD ./reservation/* /usr/share/nginx/html/reservation/
 
