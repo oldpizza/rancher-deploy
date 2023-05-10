@@ -12,6 +12,8 @@ RUN npm install
 COPY ./smartcard/ /app/smartcard
 COPY ./reservation/ /app/reservation
 
+RUN npm run build
+
 FROM nginx:alpine
 
 COPY --from=build /app/smartcard/build/ /usr/share/nginx/html/smartcard/
