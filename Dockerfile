@@ -7,8 +7,8 @@ RUN npm install
 COPY ./smartcard/ /app/smartcard
 COPY ./reservation/ /app/reservation
 
-RUN npm run build --prefix smartcard
-RUN npm run build --prefix reservation
+CMD s -c "npm run build --prefix smartcard"
+CMD s -c "npm run build --prefix reservation"
 
 FROM nginx:alpine
 
