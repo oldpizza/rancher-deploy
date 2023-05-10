@@ -5,8 +5,8 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY ./smartcard/ ./smartcard
-COPY ./reservation/ ./reservation
+COPY ./smartcard/ /app/smartcard
+COPY ./reservation/ /app/reservation
 
 FROM nginx:alpine
 
@@ -19,4 +19,4 @@ COPY ./nginx/default.template.conf /etc/nginx/site/default.template
 
 EXPOSE 80
 
-CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/site/default.template > /etc/nginx/site/default.conf && nginx -g 'daemon off;' && npm run start ./smartcard && npm run npm run start ./reservation "
+CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/site/default.template > /etc/nginx/site/default.conf && nginx -g 'daemon off;' && npm start --prefix smartcard && npm start --prefix reservation "
