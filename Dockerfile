@@ -1,10 +1,6 @@
 FROM node:16
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    nodejs \
-    npm
-    
 COPY package*.json ./
 
 RUN npm install
@@ -20,6 +16,9 @@ FROM nginx:alpine
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/default.conf /etc/nginx/site/default.conf
 COPY ./nginx/default.template.conf /etc/nginx/site/default.template
+
+COPY --from=builder /app/smartcard /app/smartcard
+COPY --from=builder /app/reservation /app/reservation
 
 EXPOSE 80
 
