@@ -1,13 +1,13 @@
 {
-  "name": "app",
+  "name": "smartcard",
   "version": "1.0.0",
+  "description": "My project description",
+  "main": "./lib/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./lib/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-iframe": "^1.9.4"
   }
 }
