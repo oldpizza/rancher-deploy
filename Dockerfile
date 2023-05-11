@@ -1,24 +1,28 @@
-FROM node AS builder
-WORKDIR /app
+# FROM node AS builder
+# WORKDIR /app
     
-COPY package*.json ./
-RUN npm install
+# COPY package*.json ./
+# RUN npm install
 
-COPY ./smartcard/ /app/smartcard
-COPY ./reservation/ /app/reservation
+# COPY ./smartcard/ /app/smartcard
+# COPY ./reservation/ /app/reservation
 
-CMD s -c "npm run build --prefix smartcard"
-CMD s -c "npm run build --prefix reservation"
+# RUN npm run build ./smartcard
+# RUN npm run build ./reservation
 
 FROM nginx:alpine
+
+ADD ./smartcard/* /usr/share/nginx/html/smartcard/
+ADD ./reservation/* /usr/share/nginx/html/reservation/
 
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/default.conf /etc/nginx/site/default.conf
 COPY ./nginx/default.template.conf /etc/nginx/site/default.template
 
-COPY --from=builder /app/smartcard/build /usr/share/nginx/html/smartcard
-COPY --from=builder /app/reservation/build /usr/share/nginx/html/reservation
+# COPY --from=builder /app/smartcard/build /usr/share/nginx/html/smartcard
+# COPY --from=builder /app/reservation/build /usr/share/nginx/html/reservation
 
-EXPOSE 80
+# EXPOSE 80
 # CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/site/default.template > /etc/nginx/site/default.conf && nginx -g 'daemon off;' & npm start --prefix smartcard & npm start --prefix reservation"
+# CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/site/default.template > /etc/nginx/site/default.conf && nginx -g 'daemon off;'"
 CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/site/default.template > /etc/nginx/site/default.conf && nginx -g 'daemon off;'"
