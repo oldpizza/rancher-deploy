@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   const myIframe = iframe({
-    src: rocess.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/',
+    src: process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/',
     width: '100%',
     height: '500px'
   });
