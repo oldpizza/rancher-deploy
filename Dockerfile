@@ -7,7 +7,12 @@ RUN npm install
 COPY ./smartcard ./smartcard
 COPY ./reservation ./reservation
 
-FROM nginx:alpine
+FROM nginx
+
+RUN apt-get update && \
+    apt-get install -y curl gnupg && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs npm
 
 RUN rm /etc/nginx/conf.d/default.conf
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
