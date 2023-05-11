@@ -4,13 +4,23 @@ const iframe = require('node-iframe');
 const app = express();
 
 app.get('/', (req, res) => {
-  const myIframe = iframe({
-    src: process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/',
+  const iframeUrl = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
+  
+  const iframeHtml = iframe({
+    url: iframeUrl,
     width: '100%',
-    height: '500px'
+    height: '500px',
   });
+  const html = `<html>
+    <head>
+      <title>Node-iframe Example</title>
+    </head>
+    <body>
+      ${iframeHtml}
+    </body>
+  </html>`;
 
-  res.send(myIframe);
+  res.send(html);
 });
 
 app.listen(3001, () => {
