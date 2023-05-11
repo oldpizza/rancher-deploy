@@ -12,10 +12,10 @@
 
 FROM nginx:alpine
 
-RUN rm /etc/nginx/conf.d/default.conf
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY ./nginx/default.template.conf /etc/nginx/conf.d/default.template
+# RUN rm /etc/nginx/conf.d/default.conf
+# COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+# COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+# COPY ./nginx/default.template.conf /etc/nginx/conf.d/default.template
 
 ADD ./smartcard/* /usr/share/nginx/html/smartcard/
 ADD ./reservation/* /usr/share/nginx/html/reservation/
