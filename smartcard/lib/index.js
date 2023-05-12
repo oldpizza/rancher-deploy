@@ -6,6 +6,7 @@ const app = express();
 app.use(cookieParser());
 app.use(csrf({ cookie: true }));
 app.get('/', (req, res) => {
+    
   const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/TC.CitizenIdX.Form/';
   const antiForgeryCookie = req.cookies['XSRF-TOKEN']; // Get the anti-forgery cookie from the request
   // const iframeUrl = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
