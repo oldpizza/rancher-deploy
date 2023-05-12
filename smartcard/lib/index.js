@@ -94,7 +94,7 @@ app.get('/', (req, res) => {
       }
   </style>
     <body>
-      <iframe src="${iframeSrc}/Runtime/Runtime/Form/Solar.Menulist.Form/">
+      <iframe src="${iframeSrc}">
     </body>
   </html>
 `;
