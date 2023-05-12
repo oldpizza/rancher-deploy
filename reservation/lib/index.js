@@ -3,9 +3,9 @@ const iframe = require('node-iframe');
 
 const app = express();
 
-app.post('/', (req, res) => {
-  const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
-  // const iframeUrl = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
+app.get('/', (req, res) => {
+  // const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
+  const iframeSrc = 'https://k2fived01/Runtime/Runtime/Form/Solar.Menulist.Form/';
   const html = `
   <html>
   <head>
