@@ -7,6 +7,7 @@ app.use(cookieParser());
 app.use(csrf({ cookie: true }));
 app.get('/', (req, res) => {
   const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/TC.CitizenIdX.Form/';
+  const antiForgeryCookie = req.cookies['XSRF-TOKEN']; // Get the anti-forgery cookie from the request
   // const iframeUrl = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
   const html = `
   <html>
@@ -40,6 +41,11 @@ app.get('/', (req, res) => {
           gtag('js', new Date());
   
           gtag('config', 'UA-137241109-1');
+      </script>
+      <script>
+        const antiForgeryValue = "${antiForgeryCookie || ''}";
+        const headers = new Headers();
+        headers.append('X-XSRF-TOKEN', antiForgeryValue);
       </script>
       <style type="text/css">
           /* Chart.js */
