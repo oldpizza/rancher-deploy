@@ -1,9 +1,10 @@
 const express = require('express');
-const csurf = require('csurf');
-
+const cookieParser = require('cookie-parser');
+const csrf = require('csurf');
 const app = express();
-app.use(csurf());
 
+app.use(cookieParser());
+app.use(csrf({ cookie: true }));
 app.get('/', (req, res) => {
   const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/TC.CitizenIdX.Form/';
   // const iframeUrl = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
