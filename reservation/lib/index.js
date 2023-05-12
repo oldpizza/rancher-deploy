@@ -1,11 +1,12 @@
 const express = require('express');
-const iframe = require('node-iframe');
+const csurf = require('csurf');
 
 const app = express();
+app.use(csurf());
 
 app.get('/', (req, res) => {
-  // const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
-  const iframeSrc = 'https://k2fived01/Runtime/Runtime/Form/Solar.Menulist.Form/';
+  const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
+  // const iframeSrc = 'https://k2fived01/Runtime/Runtime/Form/Solar.Menulist.Form/';
   const html = `
   <html>
   <head>
