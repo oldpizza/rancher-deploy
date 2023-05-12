@@ -3,7 +3,7 @@ const iframe = require('node-iframe');
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
   const iframeSrc = process.env.URL + '/Runtime/Runtime/Form/TC.CitizenIdX.Form/';
   // const iframeUrl = process.env.URL + '/Runtime/Runtime/Form/Solar.Menulist.Form/';
   const html = `
