@@ -101,6 +101,7 @@ function GetFnameTH(FnameTH) {
     const nameth = txt.split('#');
     // console.log(nameth[1])
 
+    document.getElementById(idinput[20]).style.visibility = "visible";
     document.getElementById(idinput[20]).focus();
     document.getElementById(idinput[20]).value = nameth[0];
 
