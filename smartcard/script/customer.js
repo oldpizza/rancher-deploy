@@ -54,7 +54,6 @@ function load_data() {
         var BirthDate = getFormatedDateOfBirth(json.CMD_BIRTH); //วันเกิด
         var IssueDate = getFormatedDateOfIssue(json.CMD_ISSUE); //วันที่ออกบัตร
         var expDate = getFormatedDateOfBirth(json.CMD_EXPIRE); //วันที่บัตรหมดอายุ
-        var dateNow = DateNow(expDate)
 
         document.getElementById(idinput[0]).focus();
         document.getElementById(idinput[0]).value = json.CID;
@@ -174,15 +173,4 @@ function isNull(Roads) {
     } else {
         return Roads;
     }
-}
-
-function DateNow(dateNow) {
-    const date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
-
-    // This arrangement can be altered based on how we want the date's format to appear.
-    let currentDate = `${day}/${month}/${year}`;
-    console.log(currentDate - dateNow); // "17-6-2022"
 }
