@@ -27,7 +27,7 @@ const uploadFunction = event => {
         const jsons = JSON.parse(data)
         var json = JSON.stringify(jsons)
 
-        document.getElementsByName('input_id').focus();
+        // document.getElementsByName('input_id').focus();
         document.getElementsByName('input_id').value = json;
         console.log(json)
     }).catch(error => {
