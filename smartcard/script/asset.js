@@ -24,16 +24,30 @@ const uploadFunction = event => {
             )
         }
     }).then(async data => {
-        const jsons = JSON.parse(data)
-        // var json = JSON.stringify(jsons)
-        jsons.forEach((item, index) => {
-            localStorage.setItem(`${index + 1}`, JSON.stringify(item));
-        });
+        // const jsons = JSON.parse(data)
+        // // var json = JSON.stringify(jsons)
+        // jsons.forEach((item, index) => {
+        //     localStorage.setItem(`${index + 1}`, JSON.stringify(item));
+        // });
         // document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').focus();
         // document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').value = json;
         // console.log(json)
-        document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').focus();
-        document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').value = localStorage.getItem(1);
+        const list = JSON.parse(data);
+        const chunks = [];
+
+        list.forEach((item, index) => {
+            const chunkIndex = Math.floor(index / 3);
+            if (!chunks[chunkIndex]) {
+                chunks[chunkIndex] = [];
+            }
+            chunks[chunkIndex].push(item);
+        });
+
+        chunks.forEach((chunkIndex, chunk) => {
+            const key = `chunk_${chunkIndex}`;
+            // const chunkJSON = JSON.stringify(chunk);
+            localStorage.setItem(`${chunk + 1}`, key);
+        });
     }).catch(error => {
         console.error(error)
     })
