@@ -32,6 +32,8 @@ const uploadFunction = event => {
         // document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').focus();
         // document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').value = json;
         // console.log(json)
+        document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').focus();
+        document.getElementById('66182208-4758-115d-d357-8f032bc5ec5b_358b57c7-9307-4b8a-d0a1-e6279ee5b59b').value = localStorage.getItem(1);
     }).catch(error => {
         console.error(error)
     })
