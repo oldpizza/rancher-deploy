@@ -85,17 +85,17 @@ const GetFnameTH = async data => {
     let txt = data;
     const name = txt.split('#');
 
+    document.getElementById(idinput[0]).focus();
+    document.getElementById(idinput[0]).value = name[0];
+    document.getElementById(idinput[0]).disabled = true;
+
     document.getElementById(idinput[1]).focus();
-    document.getElementById(idinput[1]).value = name[0];
+    document.getElementById(idinput[1]).value = name[1];
     document.getElementById(idinput[1]).disabled = true;
 
     document.getElementById(idinput[2]).focus();
-    document.getElementById(idinput[2]).value = name[1];
+    document.getElementById(idinput[2]).value = name[3];
     document.getElementById(idinput[2]).disabled = true;
-
-    document.getElementById(idinput[3]).focus();
-    document.getElementById(idinput[3]).value = name[3];
-    document.getElementById(idinput[3]).disabled = true;
 }
 
 // address[0] == เลขที่
