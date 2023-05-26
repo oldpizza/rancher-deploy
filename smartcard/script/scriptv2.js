@@ -65,7 +65,7 @@ function inputhide() {
 function load_data() {
   console.log("function is working");
 
-  fetch("http://localhost:9998/get_data",
+  fetch("https://local.saksiam.co.th:9998/get_data",
       {
           method: "GET",
           mode: "cors",
