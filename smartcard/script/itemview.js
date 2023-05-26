@@ -16,7 +16,7 @@ const idinput = [
 ];
 
 document.getElementById(
-    "00000000-0000-0000-0000-000000000000_ef8b39a4-b57d-6524-6a77-07f8280b43bd"
+    "00000000-0000-0000-0000-000000000000_6e443553-4e7b-7630-9362-3aedba3583d8"
 ).onclick = function () {
     load_data();
 };
