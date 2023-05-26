@@ -138,7 +138,7 @@ const Getaddress = async data => {
     document.getElementById(idinput[12]).disabled = true;
 }
 
-const GetSex = async data => {
+const GetSex = data => {
     if (data == '1') {
         const data = "ชาย";
         return data;
@@ -148,7 +148,7 @@ const GetSex = async data => {
     }
 }
 
-const GetRoads = async data => {
+const GetRoads = data => {
     if (data == "") {
         const data = "-";
         return data;
