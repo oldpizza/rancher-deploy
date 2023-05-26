@@ -15,7 +15,7 @@ const idinput = [
 ];
 
 document.getElementById(
-    "98d29eb7-7464-db14-3dd6-007095a4cd74_910170ba-6fdf-6b74-d8af-0f45f1087963_ToolbarButton"
+    "00000000-0000-0000-0000-000000000000_ef8b39a4-b57d-6524-6a77-07f8280b43bd"
 ).onclick = function () {
     load_data();
 };
