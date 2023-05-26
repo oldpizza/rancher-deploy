@@ -12,6 +12,7 @@ const idinput = [
     "00000000-0000-0000-0000-000000000000_de8eaddd-49dc-0333-3185-a645c91b1aa9", //หมู่
     "00000000-0000-0000-0000-000000000000_02a552a6-cd7f-2934-dace-f6b091263b65", //ตำบล
     "00000000-0000-0000-0000-000000000000_3032b9c7-91c7-f8fa-20f0-7740dd454799", //จังหวัด
+    "00000000-0000-0000-0000-000000000000_8ee9f24c-bb45-0266-9f07-41d6eb377818", //เลขบัตร
 ];
 
 document.getElementById(
@@ -77,6 +78,10 @@ function load_data() {
             document.getElementById(idinput[9]).focus();
             document.getElementById(idinput[9]).value = expDate;
             document.getElementById(idinput[9]).disabled = true;
+
+            document.getElementById(idinput[13]).focus();
+            document.getElementById(idinput[13]).value = json.CID;
+            document.getElementById(idinput[13]).disabled = true;
         }
     })
 }
