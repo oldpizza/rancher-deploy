@@ -3,7 +3,7 @@ const uploadFunction = event => {
     const data = new FormData()
     data.append('file', files[0])
 
-    const fetchPromise = fetch('https://apipy-dev.saksiam.co.th/FilePOD', {
+    const fetchPromise = fetch('https://apipy.saksiam.co.th/FilePOD', {
         method: 'POST',
         body: data
     })
