@@ -167,19 +167,19 @@ const getFormatedDateOfBirth = data => {
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
 
-    return yearExpire.toString + "-" + monthExpire + "-" + dateExpire;
+    return yearExpire + "-" + monthExpire + "-" + dateExpire;
 }
 const getFormatedDateOfIssue = data => {
     const yearIssue = parseInt(data.slice(0, 4)) - 543;
     const monthIssue = data.slice(4, 6);
     const dateIssue = data.slice(6, 8);
 
-    return yearIssue.toString + "-" + dateIssue + "-" + monthIssue;
+    return yearIssue + "-" + dateIssue + "-" + monthIssue;
 }
 const getFormatedDateOfExp = data => {
     const yearExpire = parseInt(data.slice(0, 4)) - 543;
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
 
-    return yearExpire.toString + "-" + dateExpire + "-" + monthExpire;
+    return yearExpire + "-" + dateExpire + "-" + monthExpire;
 }
