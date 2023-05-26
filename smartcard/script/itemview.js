@@ -163,23 +163,23 @@ const GetRoads = data => {
 }
 
 const getFormatedDateOfBirth = data => {
-    const yearExpire = data.slice(0, 4);
+    const yearExpire = parseInt(data.slice(0, 4)) - 543;
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
 
-    return dateExpire + "/" + monthExpire + "/" + yearExpire;
+    return yearExpire.toString + "-" + monthExpire + "-" + dateExpire;
 }
 const getFormatedDateOfIssue = data => {
-    const yearIssue = data.slice(0, 4);
+    const yearIssue = parseInt(data.slice(0, 4)) - 543;
     const monthIssue = data.slice(4, 6);
     const dateIssue = data.slice(6, 8);
 
-    return dateIssue + "/" + monthIssue + "/" + yearIssue;
+    return yearIssue.toString + "-" + dateIssue + "-" + monthIssue;
 }
 const getFormatedDateOfExp = data => {
-    const yearExpire = data.slice(0, 4);
+    const yearExpire = parseInt(data.slice(0, 4)) - 543;
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
 
-    return dateExpire + "/" + monthExpire + "/" + yearExpire;
+    return yearExpire.toString + "-" + dateExpire + "-" + monthExpire;
 }
