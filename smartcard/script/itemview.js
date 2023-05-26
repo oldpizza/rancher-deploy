@@ -158,7 +158,7 @@ const GetRoads = data => {
 }
 
 const getFormatedDateOfBirth = data => {
-    const yearExpire = data.slice(0, 4) + 543;
+    const yearExpire = data.slice(0, 4);
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
 
