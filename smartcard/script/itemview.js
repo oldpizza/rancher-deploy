@@ -174,12 +174,12 @@ const getFormatedDateOfIssue = data => {
     const monthIssue = data.slice(4, 6);
     const dateIssue = data.slice(6, 8);
 
-    return yearIssue + "-" + dateIssue + "-" + monthIssue;
+    return yearIssue + "-" + monthIssue + "-" + dateIssue;
 }
 const getFormatedDateOfExp = data => {
     const yearExpire = parseInt(data.slice(0, 4)) - 543;
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
 
-    return yearExpire + "-" + dateExpire + "-" + monthExpire;
+    return yearExpire + "-" + monthExpire + "-" + dateExpire;
 }
