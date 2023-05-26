@@ -149,29 +149,29 @@ const GetSex = async data => {
 }
 
 const GetRoads = async data => {
-    if (Roads == "") {
-        var Roads = "-";
-        return Roads;
+    if (data == "") {
+        const data = "-";
+        return data;
     } else {
-        return Roads;
+        return data;
     }
 }
 
-const getFormatedDateOfBirth = async data => {
+const getFormatedDateOfBirth = data => {
     const yearExpire = data.slice(0, 4) + 543;
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
 
     return dateExpire + "/" + monthExpire + "/" + yearExpire;
 }
-const getFormatedDateOfIssue = async data => {
+const getFormatedDateOfIssue = data => {
     const yearIssue = data.slice(0, 4);
     const monthIssue = data.slice(4, 6);
     const dateIssue = data.slice(6, 8);
 
     return dateIssue + "/" + monthIssue + "/" + yearIssue;
 }
-const getFormatedDateOfExp = async data => {
+const getFormatedDateOfExp = data => {
     const yearExpire = data.slice(0, 4);
     const monthExpire = data.slice(4, 6);
     const dateExpire = data.slice(6, 8);
