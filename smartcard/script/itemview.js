@@ -89,9 +89,10 @@ function load_data() {
 const GetFnameTH = async data => {
     let txt = data;
     const name = txt.split('#');
+    const title = getTitleName(name[0]);
 
     document.getElementById(idinput[0]).focus();
-    document.getElementById(idinput[0]).value = name[0];
+    document.getElementById(idinput[0]).value = title;
     document.getElementById(idinput[0]).disabled = true;
 
     document.getElementById(idinput[1]).focus();
@@ -182,4 +183,13 @@ const getFormatedDateOfExp = data => {
     const dateExpire = data.slice(6, 8);
 
     return yearExpire + "-" + monthExpire + "-" + dateExpire;
+}
+
+const getTitleName = data => {
+    if (data = 'น.ส.') {
+        const data = 'นางสาว';
+        return data;
+    } else {
+        return data;
+    }
 }
