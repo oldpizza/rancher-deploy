@@ -40,6 +40,7 @@ function load_data() {
     )
     fetchPromise.then(response => {
         if (response.status == 200) {
+            console.log('test');
             return response.json()
         } else {
             Swal.fire(
