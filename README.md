@@ -13,3 +13,4 @@ Version :1.0.1#7 DEC 2022<br>
 
 
 [คู่มือการใช้งานเครื่องอ่านบัตร Ver.1.1.0.pdf](https://github.com/SAKSIAM-TECH/smartcard/files/10172867/Ver.1.1.0.pdf) <br>
+# rancher-deploy
