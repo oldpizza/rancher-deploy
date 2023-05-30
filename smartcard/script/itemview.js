@@ -188,7 +188,7 @@ const getFormatedDateOfExp = data => {
 }
 
 const getTitleName = data => {
-    if (data = 'น.ส.') {
+    if (data == 'น.ส.') {
         const data = 'นางสาว';
         return data;
     } else {
